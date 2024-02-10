@@ -339,7 +339,7 @@ def main():
 
     # Task 3: Comparing race and gender combinations for all employees and employees with medium, low or very low risk
 
-    print("Task 3: Comparing Gendered Race Combinations Before and After Layoffs")
+    print("Task 3: Comparing Gendered Race Combinations for All Employees and Employees with Medium, Low or Very Low Risk")
 
     print("Category: All Employees ---> Employees with Medium, Low or Very Low Risk")
 

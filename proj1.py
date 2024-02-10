@@ -59,7 +59,7 @@ def layoff_risk_level_group(employees, dict_risk_framework):
 
         dict_risk_framework (dict): A dictionary where each key is a layoff risk level and each value is a
         
-        tuple containing the earliest hiring year associated with that fire risk level and the latest hiring year associated with that layoff risk level.
+        tuple containing the earliest hire year associated with that fire risk level and the latest hire year associated with that layoff risk level.
 
 
     Returns:
@@ -179,7 +179,7 @@ def count_employees_by_years_worked(employees):
 
         dict: A collection of nested dictionaries where the sequential keys are a working year (1976-hiring year), a race, and a gender in that order
 
-        and the innermost values represent the count of employees whose information matches the hiring year, race, and gender keys.
+        and the innermost values represent the count of employees whose information matches the hire year, race, and gender keys.
 
 
 
@@ -220,7 +220,7 @@ class TestEmployeeDataAnalysis(unittest.TestCase):
 
         # Your test code for layoff_risk_level_group goes here
 
-        #Test that the function correctly puts employees into different layoff risk level groups based on their hiring year.
+        #Test that the function correctly puts employees into different layoff risk level groups based on their hire year.
 
         pass
 
@@ -264,7 +264,7 @@ def main():
     employee_data = csv_loader('GM_employee_data.csv')
 
 
-    # Task 1: Put employees into different layoff risk level groups based on their hiring year
+    # Task 1: Put employees into different layoff risk level groups based on their hire year
     layoff_risk_level = {'Very High': (1970, 1976), 'High': (1964, 1969), 'Medium': (1958, 1963), 'Low': (1954, 1957), 'Very Low': (1950, 1953)}
     dict_layoff_risk_level = layoff_risk_level_group(employee_data, layoff_risk_level)
 
@@ -295,9 +295,9 @@ def main():
 
 
 
-    # Task 1: Putting employees into different layoff risk level groups based on their hiring year
+    # Task 1: Putting employees into different layoff risk level groups based on their hire year
 
-    print("Task 1: Split Employees by Hire Year")
+    print("Task 1: Group Employees by Hire Year")
 
     print(f"Number of employees hired total: {len(employee_data)}")
 

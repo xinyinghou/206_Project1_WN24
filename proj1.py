@@ -279,7 +279,7 @@ def main():
 
 
 
-    # Task 3: Count employees by race and gender combinations before and after layoffs
+    # Task 3: Count employees by race and gender combinations for all employees and for employees whose layoff risk level is "Medium", "Low" or "Very Low"
 
     gendered_race_counts_total = race_and_gender_counter(employee_data)
 

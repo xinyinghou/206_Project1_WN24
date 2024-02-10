@@ -275,7 +275,7 @@ def main():
     race_gender_counts_total = race_or_gender_counter(employee_data)
 
     
-    race_gender_counts_after_layoffs = race_or_gender_counter(employees_not_high_risk)
+    race_gender_counts_not_high_risk = race_or_gender_counter(employees_not_high_risk)
 
 
 
@@ -283,7 +283,7 @@ def main():
 
     gendered_race_counts_total = race_and_gender_counter(employee_data)
 
-    gendered_race_counts_after_layoffs = race_and_gender_counter(employees_not_high_risk)
+    gendered_race_counts_not_high_risk = race_and_gender_counter(employees_not_high_risk)
 
 
 
@@ -317,7 +317,7 @@ def main():
 
     for category, count_all in race_gender_counts_total['race'].items():
 
-        count_not_high_risk = race_gender_counts_after_layoffs['race'].get(category, 0)
+        count_not_high_risk = race_gender_counts_not_high_risk['race'].get(category, 0)
 
         print(f"\t{category}: {count_all} ---> {count_not_high_risk}")
 
@@ -327,7 +327,7 @@ def main():
 
     for category, count_all in race_gender_counts_total['gender'].items():
 
-        count_not_high_risk = race_gender_counts_after_layoffs['gender'].get(category, 0)
+        count_not_high_risk = race_gender_counts_not_high_risk['gender'].get(category, 0)
 
         print(f"\t{category}: {count_all} ---> {count_not_high_risk}")
 
@@ -347,7 +347,7 @@ def main():
 
     for category, count_all in gendered_race_counts_total.items():
 
-        count_not_high_risk = gendered_race_counts_after_layoffs.get(category, 0)
+        count_not_high_risk = gendered_race_counts_not_high_risk.get(category, 0)
 
         print(f"\t{category}: {count_all} ---> {count_not_high_risk}")
 
@@ -359,7 +359,7 @@ def main():
 
     csv_writer(gendered_race_counts_total, "GM_employee_data_all_before_layoffs.csv")
 
-    csv_writer(gendered_race_counts_after_layoffs, "GM_employee_data_not_high_risk.csv")
+    csv_writer(gendered_race_counts_not_high_risk, "GM_employee_data_not_high_risk.csv")
 
 
 
